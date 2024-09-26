@@ -93,7 +93,7 @@ export class Tasks {
 					html: EmailService.compile({
 						content: body,
 						footer: {
-							unsubscribe: campaign ? true : !!action && action.template.type === "MARKETING",
+							unsubscribe: campaign ? false : !!action && action.template.type === "MARKETING",
 						},
 						contact: {
 							id: contact.id,
